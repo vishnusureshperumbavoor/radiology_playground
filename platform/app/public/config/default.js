@@ -37,6 +37,19 @@ window.config = {
   // },
   dataSources: [
     {
+      friendlyName: 'AWS HealthImaging',
+      namespace: 'ohif-aws-healthimaging.dataSourcesModule.healthlake',
+      sourceName: 'healthlake',
+      configuration: {
+        name: 'healthlake',
+        healthlake: {
+          datastoreID: '21b75fc2d1b640979a3d133ba28bcf27',
+          endpoint: 'http://localhost:8089', // Address the the docker proxy
+        },
+        singlepart: 'bulkdata,video,pdf,image/jphc',
+      },
+    },
+    {
       namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
       sourceName: 'dicomweb',
       configuration: {
